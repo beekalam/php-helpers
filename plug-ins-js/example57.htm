@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+<html><head><title>Plug-in JavaScript: Example 57</title>
+
+<script src="PJ.js"></script>
+<script>Initialize()</script>
+
+</head><body>
+
+<div id='sea'></div>
+<img id='ship' src='ship.png' />
+<span id='note'><font size='5'>Press any key</font></span>
+
+<script>
+
+window.onload = function()
+{
+   width  = GetWindowWidth()
+   height = GetWindowHeight()
+   x      = width  - 200
+   y      = height - 150
+   mid    = width / 2 - 100
+
+   Locate('sea', ABS, 0, height - 50)
+   Resize('sea', width, 50)
+   S(document.body).backgroundColor = '#b7d4dc'
+   S('sea').backgroundColor         = '#90a5a6'
+   Locate('ship', ABS, 0, y)
+   Locate('note', ABS,0, y + 115)
+   CenterX('note')
+   Opacity('note', 0)
+
+   While("KEY_PRESS != ' '",
+      Array(
+      "FadeIn('ship', 500, 0)",
+      InsVars("Slide('ship', 0, #1, #2, #1, 2500,0)", y, mid),
+      "FadeIn('note', 1000, 0)",
+      "WaitKey()",
+      "FadeOut('note', 1000, 0)",
+      InsVars("Slide('ship', #1, #2, #3, #2, 2500,0)", mid, y, x),
+      "FadeOut('ship', 500, 0)",
+      InsVars("ChainThis('GoTo(\"ship\", 0, #1)')", y)
+      )
+   )
+}
+
+</script>

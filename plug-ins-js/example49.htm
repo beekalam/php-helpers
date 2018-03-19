@@ -1,0 +1,35 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+<html><head><title>Plug-in JavaScript: Example 49</title>
+
+<script src="PJ.js"></script>
+<script>Initialize()</script>
+
+</head><body>
+
+<img id='i1' src='i1.gif' />
+<img id='i2' src='i2.gif' />
+<img id='i3' src='i3.gif' />
+<img id='i4' src='i4.gif' />
+
+<script>
+
+window.onload = function()
+{
+   ids = Array('i1', 'i2', 'i3', 'i4')
+   Zoom(ids, 1, 1, 86, 86, 70, 70, 1, 1, 0)
+   O(ids, 'onmouseover', up)
+   O(ids, 'onmouseout',  down)
+
+   function up()
+   { 
+      Zoom(this, 1, 1, 70, 70, 86, 86, 200, 1, 1)
+   }
+
+   function down()
+   {
+      Zoom(this, 1, 1, 86, 86, 70, 70, 200, 1, 1)
+   }
+}
+
+</script>

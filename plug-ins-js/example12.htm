@@ -1,0 +1,23 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+<html><head><title>Plug-in JavaScript: Example 12</title>
+
+<script src="PJ.js"></script>
+<script>Initialize()</script>
+
+</head><body>
+
+<div id='heading'><h1>This is a heading</h1></div>
+
+<script>
+
+window.onload = function()
+{
+   alert(Html('heading'))
+   Html('heading', "<h2>This is a subheading</h2>")
+   alert(Html('heading'))
+}
+
+</script>
+
+

@@ -1,0 +1,40 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+<html><head><title>Plug-in JavaScript: Example 65</title>
+
+<script src="PJ.js"></script>
+<script>Initialize()</script>
+
+</head><body><center>
+
+<h1>Tom's Hardware</h1>
+
+Right click anywhere for the main menu
+
+<span id='menu'><center>
+<font face='Arial' size='2'><b>
+<font size='3' color='#0b0d7d'>
+&nbsp;Tom's Hardware&nbsp;</font><br />
+<a href='#'>Kitchen</a><br />
+<a href='#'>Bathroom</a><br />
+<a href='#'>Furniture</a><br />
+<a href='#'>Lighting</a><br />
+<a href='#'>Flooring</a><br />
+<a href='#'>Decorating</a><br />
+<a href='#'>Electrical</a><br />
+<a href='#'>Heating</a><br />
+<a href='#'>Tools</a><br />
+<a href='#'>Gardening</a><br />
+<a href='#'>Offers</a>
+</b></font></center></span>
+
+<script>
+
+window.onload = function()
+{
+   S('menu').backgroundColor = '#abeceb'
+   S('menu').border          = 'solid 1px'
+   ContextMenu(document, 'menu', 'fade', 0, 0, 300)
+}
+
+</script>

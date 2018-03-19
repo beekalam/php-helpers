@@ -1,0 +1,40 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+<html><head><title>Plug-in JavaScript: Example 63</title>
+
+<script src="PJ.js"></script>
+<script>Initialize()</script>
+
+</head><body>
+
+<center>
+<span id='l1'>Image 1</span> |
+<span id='l2'>Image 2</span> |
+<span id='l3'>Image 3</span> |
+<span id='l4'>Image 4</span>
+
+<br /><br /><div id='d'>
+<img id='a1' src='avatar1.jpg' align='left' />
+<img id='a2' src='avatar2.jpg' align='left' />
+<img id='a3' src='avatar3.jpg' align='left' />
+<img id='a4' src='avatar4.jpg' align='left' /></div></center>
+
+<script>
+
+window.onload = function()
+{
+   Position('d', 'absolute')
+   CenterX('d')
+
+   O('l1').onmouseover = O('l1').onmouseout = fade
+   O('l2').onmouseover = O('l2').onmouseout = inflate
+   O('l3').onmouseover = O('l3').onmouseout = zoom
+   O('l4').onmouseover = O('l4').onmouseout = instant
+
+   function fade()    { PopToggle('a1', 'fade',    1, 1, 500, 1) }
+   function inflate() { PopToggle('a2', 'inflate', 1, 0, 500, 1) }
+   function zoom()    { PopToggle('a3', 'zoom',    1, 1, 500, 1) }
+   function instant() { PopToggle('a4', 'instant', 1, 1, 500, 1) }
+}
+
+</script>

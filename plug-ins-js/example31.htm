@@ -1,0 +1,24 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+<html><head><title>Plug-in JavaScript: Example 31</title>
+
+<script src="PJ.js"></script>
+<script>Initialize()</script>
+
+</head><body>
+
+<span id='ghost'>Now you see me...</span> and soon you won't
+
+<script>
+
+window.onload = function()
+{
+   S('ghost').backgroundColor = 'lightblue'
+   Resize('ghost', 128, 32)
+   alert('Click OK to see the object disappear')
+   Invisible('ghost')
+}
+
+</script>
+
+

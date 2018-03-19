@@ -1,0 +1,41 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+<html><head><title>Plug-in JavaScript: Example 58</title>
+
+<script src="PJ.js"></script>
+<script>Initialize()</script>
+
+</head><body>
+
+<img id='a' src='einstein1.png' />
+<img id='b' src='einstein2.png' />
+<div id='c'><font size='5'><b>General Relativity</b></font>
+<p align='justify'>General relativity is a theory of gravitation
+developed by Einstein in the years 1907-1915. The development of
+general relativity began with the equivalence principle, under which
+the states of accelerated motion and being at rest in a gravitational
+field (for example when standing on the surface of the Earth) are 
+physically identical. The upshot of this is that free fall is inertial
+motion; an object in free fall is falling because that is how objects
+move when there is no force being exerted on them, instead of this
+being due to the force of gravity as is the case in classical
+mechanics.</p></div>
+
+<script>
+
+window.onload = function()
+{
+   Hide('c')
+   width = GetWindowWidth()
+   Resize('c', width - 220, 260)
+   Show('c')
+   ids = Array('a', 'b')
+   Locate(ids, ABS, width - 205, 5)
+   Resize(ids, 200, 264)
+   VisibilityToggle('b')
+
+   O('a').onmouseover = function() { Flip('a', 'b', 1, 0, 250, 0) }
+   O('b').onmouseout  = function() { Flip('b', 'a', 1, 0, 250, 0) }
+}
+
+</script>

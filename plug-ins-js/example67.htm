@@ -1,0 +1,32 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+<html><head><title>Plug-in JavaScript: Example 67</title>
+
+<script src="PJ.js"></script>
+<script>Initialize()</script>
+
+</head><body>
+
+<div id='r1'>
+<img id='p1' src='palace.png' align='left'>
+For sale: 600 room, 300 year old central London house, located
+close to all the amenities, right in the heart of Westminster.</div>
+
+<div id='r2'>
+<img id='p2' src='plan.png' align='right'>
+829,818 sq ft: Historical setting, famous residents, exquisitely
+decorated throughout. Phone 555 1234 for more details.</div>
+
+<script>
+
+window.onload = function()
+{
+   rolls = Array('r1', 'r2')
+   S(rolls, 'border', 'solid 1px')
+   Resize(rolls, 320, 100)
+   S('p1').paddingRight = Px(10)
+   S('p2').paddingLeft  = Px(10)
+   RollOver('r1', 'r2')
+}
+
+</script>

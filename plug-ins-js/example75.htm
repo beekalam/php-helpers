@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+<html><head><title>Plug-in JavaScript: Example 75</title>
+
+<script src="PJ.js"></script>
+<script>Initialize()</script>
+
+</head><body>
+
+<b>How to become a millionaire:<ul>
+   <li><span id='a'>Win the lottery</span></li>
+   <li><span id='b'>Inherit the money</span></li>
+   <li><span id='c'>Marry a millionaire</span></li>
+   <li><span id='d'>Become a movie or pop star</span></li>
+   <li><span id='e'>Invest $130/month in stocks for 40 years!</span></li>
+</ul></b>
+
+<script>
+
+window.onload = function()
+{
+   h = GetWindowHeight()
+
+   FlyIn('a', 0, h, 1000)
+   FlyIn('b', 0, h, 2000)
+   FlyIn('c', 0, h, 3000)
+   FlyIn('d', 0, h, 4000)
+   FlyIn('e', 0, h, 5000)
+
+// Here's a different set of FlyIns you can try
+//
+//   FlyIn('a', -W('a') - 50, -W('a') - 50, 1000)
+//   FlyIn('b', -W('b') - 50, -W('b') - 50, 3000)
+//   FlyIn('c', -W('c') - 50, -W('c') - 50, 5000)
+//   FlyIn('d', -W('d') - 50, -W('d') - 50, 7000)
+//   FlyIn('e', -W('e') - 50, -W('e') - 50, 9000)
+
+// And here's another set...
+//
+//   FlyIn('a', -W('a') - 50, 0, 1000)
+//   FlyIn('b', -W('b') - 50, 0, 3000)
+//   FlyIn('c', -W('c') - 50, 0, 5000)
+//   FlyIn('d', -W('d') - 50, 0, 7000)
+//   FlyIn('e', -W('e') - 50, 0, 9000)
+}
+
+</script>

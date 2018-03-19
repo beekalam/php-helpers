@@ -1,0 +1,20 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+<html><head><title>Plug-in JavaScript: Example 6</title>
+
+<script src="PJ.js"></script>
+<script>Initialize()</script>
+
+</head><body>
+
+<div id='output'></div>
+
+<script>
+
+window.onload = function()
+{
+   for (j = 1 ; j < 145 ; ++j)
+      O('output').innerHTML += FromKeyCode(j) + ", "
+}
+
+</script>

@@ -1,0 +1,28 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+<html><head><title>Plug-in JavaScript: Example 27</title>
+
+<script src="PJ.js"></script>
+<script>Initialize()</script>
+
+</head><body>
+
+<img id='i1' src='i1.gif' />
+<img id='i2' src='i2.gif' />
+<img id='i3' src='i3.gif' />
+<img id='i4' src='i4.gif' />
+
+<script>
+
+window.onload = function()
+{
+   ids = Array('i1', 'i2', 'i3', 'i4')
+   Position(ids, FIX)
+   GoToEdge('i1', TP, 50)
+   GoToEdge('i2', BM, 10)
+   GoToEdge('i3', LT, 33)
+   GoToEdge('i4', RT, 66)
+}
+
+</script>
+

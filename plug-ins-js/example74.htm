@@ -1,0 +1,35 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+<html><head><title>Plug-in JavaScript: Example 74</title>
+
+<script src="PJ.js"></script>
+<script>Initialize()</script>
+
+</head><body>
+
+<center>
+   <b>
+      <font face='Verdana' size='6'>
+         <span id='t'>New - See our latest offers!</span><br />
+         <span id='m'>Mouseover Me</span>
+      </font>
+   </b>
+</center>
+
+<script>
+
+window.onload = function()
+{
+   ColorFade('t', '#ffff00', '#0000ff', 'text', 2000, 0)
+   ColorFade('t', '#0000ff', '#ffff00', 'back', 2000, 0)
+
+   O('m').onmouseover = function() { fade('#000000', '#0088ff') }
+   O('m').onmouseout  = function() { fade('#0088ff', '#00000') }
+
+   function fade(a, b)
+   {
+      ColorFade('m', a, b, 'text', 256, 1) 
+   }
+}
+
+</script>

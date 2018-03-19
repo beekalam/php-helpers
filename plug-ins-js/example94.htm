@@ -1,0 +1,26 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+<html><head><title>Plug-in JavaScript: Example 94</title>
+
+<script src="PJ.js"></script>
+<script>Initialize()</script>
+
+</head><body>
+
+Credit Card Number:
+<input id='ccnum' type='text' name='ccnum' size='24' />
+<button id='button'>Submit</button>
+
+<script>
+
+window.onload = function()
+{
+   O('button').onclick = function()
+   {
+      O('ccnum').value =
+         CleanupString(O('ccnum').value , 1 ,0 ,1, 1, 0, 0, 0)
+   }
+}
+
+</script>
+

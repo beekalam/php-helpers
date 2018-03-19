@@ -1,0 +1,80 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+<html><head><title>Plug-in JavaScript: Example 64</title>
+
+<script src="PJ.js"></script>
+<script>Initialize()</script>
+
+</head><body>
+
+<span id='h1'><b>News</b></span><br /><span id='c1'>
+&nbsp; &raquo; <a href='local.htm'>Local News</a><br/ >
+&nbsp; &raquo; <a href='world.htm'>World News</a><br/ >
+&nbsp; &raquo; <a href='entertainment.htm'>Entertainment News</a><br/ >
+&nbsp; &raquo; <a href='business.htm'>Business News</a><br/ >
+&nbsp; &raquo; <a href='technology.htm'>Technology News</a><br/ ></span>
+
+<span id='h2'><b>Sport</b></span><br /><span id='c2'>
+&nbsp; &raquo; <a href='football.htm'>Football</a><br/ >
+&nbsp; &raquo; <a href='baseball.htm'>Baseball</a><br/ >
+&nbsp; &raquo; <a href='hockey.htm'>Hockey</a><br/ >
+&nbsp; &raquo; <a href='soccer.htm'>Soccer</a><br/ ></span>
+
+<span id='h3'><b>Weather</b></span><br /><span id='c3'>
+&nbsp; &raquo; <a href='movies.htm'>Movies</a><br/ >
+&nbsp; &raquo; <a href='music.htm'>Music</a><br/ >
+&nbsp; &raquo; <a href='televison.htm'>Television</a><br/ ></span>
+
+<span id='h4'><b>Links</b></span><br /><span id='c4'>
+&nbsp; &raquo; <a href='index.htm'>Home Page</a><br/ >
+&nbsp; &raquo; <a href='articles.htm'>Articles</a><br/ >
+&nbsp; &raquo; <a href='videos.htm'>Videos</a><br/ >
+&nbsp; &raquo; <a href='podcasts.htm'>Podcasts</a><br/ ></span>
+
+<!-- Comment out the above HTML and and the first FoldingMenu()
+     call in the script section below. Then uncomment this
+     section and the commented out FoldingMenu() call in the
+     script section to see this menu repurposed to use the
+     'hover' action.
+
+<span id='h1'><b>News</b></span> |
+<span id='h2'><b>Sport</b></span> |
+<span id='h3'><b>Weather</b></span> |
+<span id='h4'><b>Links</b></span><br />
+
+<span id='c1'>
+&nbsp; &raquo; <a href='local.htm'>Local News</a>
+&nbsp; <a href='world.htm'>World News</a>
+&nbsp; <a href='entertainment.htm'>Entertainment News</a>
+&nbsp; <a href='business.htm'>Business News</a>
+&nbsp; <a href='technology.htm'>Technology News</a></span>
+
+<span id='c2'>
+&nbsp; &raquo; <a href='football.htm'>Football</a>
+&nbsp; <a href='baseball.htm'>Baseball</a>
+&nbsp; <a href='hockey.htm'>Hockey</a>
+&nbsp; <a href='soccer.htm'>Soccer</a></span>
+
+<span id='c3'>
+&nbsp; &raquo; <a href='movies.htm'>Movies</a>
+&nbsp; <a href='music.htm'>Music</a>
+&nbsp; <a href='televison.htm'>Television</a></span>
+
+<span id='c4'>
+&nbsp; &raquo; <a href='index.htm'>Home Page</a>
+&nbsp; <a href='articles.htm'>Articles</a>
+&nbsp; <a href='videos.htm'>Videos</a>
+&nbsp; <a href='podcasts.htm'>Podcasts</a></span>
+-->
+
+<script>
+
+window.onload = function()
+{
+   headings = Array('h1', 'h2', 'h3', 'h4')
+   contents = Array('c1', 'c2', 'c3', 'c4')
+   FoldingMenu(headings, contents, 'click', 'inflate', 0, 0, 1, 200, 300, 1)
+// FoldingMenu(headings, contents, 'hover', 'inflate', 0, 0, 1, 200, 300, 1)
+}
+
+</script>

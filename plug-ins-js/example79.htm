@@ -1,0 +1,53 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+<html><head><title>Plug-in JavaScript: Example 79</title>
+
+<script src="PJ.js"></script>
+<script>Initialize()</script>
+
+</head><body>
+
+<div id='billb' style='display:none'>
+<font face='Times New Roman'>
+
+   <div id='b1'><img id='p1' src='palace.png' align='left' style=
+   'padding-right:10px'>For sale: 600 room, 300 year old central London
+   house, located close to all the amenities, right in the heart of
+   Westminster.</div>
+
+   <div id='b2'><img id='p2' src='plan.png' align='right' style=
+   'padding-left:10px'>829,818 sq ft: Historical setting, famous
+   residents, exquisitely decorated throughout. Phone 555 1234 for more
+   details.</div>
+
+   <img id='b3' src='london.png' />
+
+</div>
+
+<script>
+
+window.onload = function()
+{
+   S('billb').border = 'solid 1px'
+   Resize('billb', 320, 100)
+   objects = Array('b1', 'b2', 'b3')
+   Resize(objects, 320, 100)
+   S(objects, 'background.Color', '#ffffff')
+   Show('billb')
+   Billboard('billb', objects, 1, 500, 3000)
+
+   O('billb').onmouseover = pause
+   O('billb').onmouseout  = resume
+
+   function pause()
+   {
+      Billboard('billb', '', '', '', 'stop')
+   }
+   
+   function resume()
+   {
+      Billboard('billb', objects, 1, 500, 3000)
+   }
+}
+
+</script>

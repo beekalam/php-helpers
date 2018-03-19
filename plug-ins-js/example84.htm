@@ -1,0 +1,34 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+<html><head><title>Plug-in JavaScript: Example 84</title>
+
+<script src="PJ.js"></script>
+<script>Initialize()</script>
+
+</head><body>
+
+<script>
+
+window.onload = function()
+{
+   value = ProcessCookie('read', 'username')
+   if (value != false)
+      alert("The value returned for 'username' is: '" + value + "'")
+   else alert("The cookie 'username' has no value.")
+
+   alert("Click OK to store cookie 'username' with the value 'fred'")
+   ProcessCookie('save', 'username', 'fred', 60 * 60 * 24)
+
+   alert("Click OK to retrieve the cookie")
+   value = ProcessCookie('read', 'username')
+
+   if (confirm("The value returned for 'username' is: '" + value     +
+      "'\n\nNow, either click [OK] to delete the cookie, and then\n" +
+      "reload the page to see if the cookie has been erased.\n\nOr " +
+      "click [Cancel] to do nothing, and then reload\nthe page to "  +
+      "see if it has retained its value.\n"))
+      ProcessCookie('erase', 'username')
+}
+
+</script>
+

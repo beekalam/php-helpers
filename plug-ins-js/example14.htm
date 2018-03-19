@@ -1,0 +1,36 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+<html><head><title>Plug-in JavaScript: Example 14</title>
+
+<script src="PJ.js"></script>
+<script>Initialize()</script>
+
+</head><body>
+
+<div id='mydiv'>Example Text</div>
+
+<script>
+
+window.onload = function()
+{
+   S('mydiv').width           = Px(200)
+   S('mydiv').height          = Px(100)
+   S('mydiv').backgroundColor = 'green'
+   S('mydiv').color           = 'white'
+   S('mydiv').position        = 'absolute'
+   SaveState('mydiv')
+
+   alert("Click OK to see some changes")
+
+   S('mydiv').backgroundColor = 'blue'
+   S('mydiv').color           = 'yellow'
+   S('mydiv').left            = Px(100)
+
+   alert("Click OK to see them change back again")
+
+   RestoreState('mydiv')
+}
+
+</script>
+
+

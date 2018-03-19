@@ -1,0 +1,26 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+<html><head><title>Plug-in JavaScript: Example 83</title>
+
+<script src="PJ.js"></script>
+<script>Initialize()</script>
+
+</head><body>
+
+<center>
+<img id='a' src='ghost.png' />
+<img id='b' src='ghost.png' />
+<img id='c' src='ghost.png' />
+</center>
+
+<script>
+
+window.onload = function()
+{
+   PulsateOnMouseover('a', 100, 66,  500)
+   PulsateOnMouseover('b', 66, 100,  750)
+   PulsateOnMouseover('c', 100,  0, 1000)
+}
+
+</script>
+

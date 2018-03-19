@@ -1,0 +1,27 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+<html><head><title>Plug-in JavaScript: Example 90</title>
+
+<script src="PJ.js"></script>
+<script>Initialize()</script>
+
+</head><body>
+
+<h2>Signup Form</h2>
+<pre>
+Name:  <input id='name'  type='text' size='50'/>
+Email: <input id='email' type='text' size='50'/>
+</pre>
+
+<script>
+
+window.onload = function()
+{
+   FieldPrompt('name', "Please enter your name",
+      '#000000', '#444444', 'italic')
+   FieldPrompt('email', "Please enter your email address",
+      '#000000', '#444444', 'italic')
+}
+
+</script>
+

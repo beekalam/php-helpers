@@ -1,0 +1,28 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+<html><head><title>Plug-in JavaScript: Example 99</title>
+
+<script src="PJ.js"></script>
+<script>Initialize()</script>
+
+</head><body>
+
+<h2>
+<a id='home'  href='/'     >Home</a> |
+<a id='news'  href='/news' >News</a> |
+<a id='blog'  href='/blog' >Blog</a> |
+<a id='links' href='/links'>Links</a>
+</h2>
+
+<script>
+
+window.onload = function()
+{
+   tip = 'Click this link to return<br />to the main home page'
+   ToolTip('home', tip, 'Verdana', '12px', '#444444', '#eeeeff',
+      '#008888', 'solid', '1', 500, 5000)
+   O('links').title = tip
+}
+
+</script>
+

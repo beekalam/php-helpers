@@ -1,0 +1,36 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+<html><head><title>Plug-in JavaScript: Example 80</title>
+
+<script src="PJ.js"></script>
+<script>Initialize()</script>
+
+</head><body>
+
+<div id='chart'></div>
+
+<script>
+
+window.onload = function()
+{
+   title   = 'My Favorite Types of Cheese'
+   tcolor  = 'FF0000'
+   tsize   = '20'
+   type    = 'pie3d'
+   width   = '530'
+   height  = '230'
+   bwidth  = ''
+   labels  = 'Stilton|Brie|Swiss|Cheddar|Edam|Colby|Gorgonzola'
+   legends = labels
+   colors  = 'BD0000,DE6B00,284B89,008951,9D9D9D,A5AB4B,8C70A4,FFD200'
+   bgfill  = 'EEEEFF'
+   data    = '14.9,18.7,7.1,47.3,6.0,3.1,2.1'
+
+   GoogleChart('chart', title, tcolor, tsize, type, bwidth, labels,
+      legends, colors, bgfill, width, height, data)
+
+   Resize('chart', width, height)
+   S('chart').border = 'solid 1px'
+}
+
+</script>

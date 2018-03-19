@@ -1,0 +1,28 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+<html><head><title>Plug-in JavaScript: Example 4</title>
+
+<script src="PJ.js"></script>
+<script>Initialize()</script>
+
+</head><body>
+
+<div id='output'></div><p>
+
+PaddingPaddingPaddingPaddingPaddingPaddingPaddingPaddingPaddingPaddingPaddingPadding
+
+<script>
+
+window.onload = function()
+{
+   interrupt = setInterval(simpleInterrupt, INTERVAL)
+
+   function simpleInterrupt()
+   {
+      O('output').innerHTML = 
+         "  Mouse X,Y = " + MOUSE_X  + "," + MOUSE_Y +
+         " Scroll X,Y = " + SCROLL_X + "," + SCROLL_Y
+   }
+}
+
+</script>

@@ -1,0 +1,43 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+<html><head><title>Plug-in JavaScript: Example 56</title>
+
+<script src="PJ.js"></script>
+<script>Initialize()</script>
+
+</head><body>
+
+<div id='sea'></div>
+<img id='ship' src='ship.png' />
+
+<script>
+
+window.onload = function()
+{
+   width  = GetWindowWidth()
+   height = GetWindowHeight()
+   x      = width  - 200
+   y      = height - 150
+   mid    = width / 2 - 100
+
+   Locate('sea', ABS, 0, height - 50)
+   Resize('sea', width, 50)
+   S(document.body).backgroundColor = '#b7d4dc'
+   S('sea').backgroundColor         = '#90a5a6'
+   Locate('ship', ABS, 0, y)
+
+   While("KEY_PRESS != \" \"",
+      Array(
+      "FadeIn('ship', 500, 0)",
+      InsVars("Slide('ship', 0, #1, #2, #1, 2500,0)", y, mid),
+      "ZoomDown('ship', 1, 1, 250, 0, 0)",
+      "Pause(1000)",
+      "ZoomRestore('ship', 1, 1, 250, 0, 0)",
+      InsVars("Slide('ship', #1, #2, #3, #2, 2500,0)", mid, y, x),
+      "FadeOut('ship', 500, 0)",
+      InsVars("ChainThis('GoTo(\"ship\", 0, #1)')", y)
+      )
+   )
+}
+
+</script>

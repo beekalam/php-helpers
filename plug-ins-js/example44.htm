@@ -1,0 +1,51 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+<html><head><title>Plug-in JavaScript: Example 44</title>
+
+<script src="PJ.js"></script>
+<script>Initialize()</script>
+
+</head><body>
+
+Choose a photo:
+<span id='m1'>Landscape</span>,
+<span id='m2'>Museum</span>,
+<span id='m3'>Parrots</span>,
+<span id='m4'>Steps</span>,
+<span id='m5'>Pyramid</span>
+<div id='b1'></div>
+<div id='b2'></div>
+<div id='b3'></div>
+<div id='b4'></div>
+<div id='b5'></div>
+<img id='p1' src='photo1.jpg' />
+<img id='p2' src='photo2.jpg' />
+<img id='p3' src='photo3.jpg' />
+<img id='p4' src='photo4.jpg' />
+<img id='p5' src='photo5.jpg' />
+
+<script>
+
+window.onload = function()
+{
+   Locate(Array('b1', 'b2', 'b3', 'b4', 'b5'), 'absolute',  2, 50)
+   Locate('p1', ABS, 330, 50)
+   Locate('p2', ABS, 335, 55)
+   Locate('p3', ABS, 340, 60)
+   Locate('p4', ABS, 345, 65)
+   Locate('p5', ABS, 350, 70)
+
+   swap('m1', 'p1', 'b1')
+   swap('m2', 'p2', 'b2')
+   swap('m3', 'p3', 'b3')
+   swap('m4', 'p4', 'b4')
+   swap('m5', 'p5', 'b5')
+
+   function swap(o1, o2, o3)
+   {
+      O(o1).onmouseover = function() { SlideBetween(o2, o3, 200, 1) }
+      O(o1).onmouseout  = function() { SlideBetween(o2, o3, 200, 1) }
+   }
+}
+
+</script>

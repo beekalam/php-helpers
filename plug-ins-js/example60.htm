@@ -1,0 +1,72 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+<html><head><title>Plug-in JavaScript: Example 60</title>
+
+<script src="PJ.js"></script>
+<script>Initialize()</script>
+
+</head><body>
+
+<div id='m1'>
+&nbsp;&raquo; <u>World News</u><br />
+&nbsp;&raquo; <u>Entertainment News</u><br />
+&nbsp;&raquo; <u>Tech News</u><br />
+&nbsp;&raquo; <u>Business News</u><br />
+<center><b><font color='yellow'>NEWS</font></b></center></div>
+
+<div id='m2'>
+&nbsp;&raquo; <u>Hurricane News</u><br />
+&nbsp;&raquo; <u>Long Term Forecast</u><br />
+&nbsp;&raquo; <u>National Weather</u><br />
+&nbsp;&raquo; <u>Local Weather</u><br />
+<center><b><font color='yellow'>WEATHER</font></b></center></div>
+
+<div id='m3'>
+&nbsp;&raquo; <u>Football News</u><br />
+&nbsp;&raquo; <u>Baseball News</u><br />
+&nbsp;&raquo; <u>Soccer News</u><br />
+&nbsp;&raquo; <u>Hockey News</u><br />
+<center><b><font color='yellow'>SPORT</font></b></center></div>
+
+<div id='m4'>
+<center><b><font color='white'>NEWS</font></b></center>
+&nbsp;&raquo; <u>World News</u><br />
+&nbsp;&raquo; <u>Entertainment News</u><br />
+&nbsp;&raquo; <u>Tech News</u><br />
+&nbsp;&raquo; <u>Business News</u></div>
+
+<div id='m5'>
+<center><b><font color='white'>WEATHER</font></b></center>
+&nbsp;&raquo; <u>Hurricane News</u>    <br />
+&nbsp;&raquo; <u>Long Term Forecast</u><br />
+&nbsp;&raquo; <u>National Weather</u>  <br />
+&nbsp;&raquo; <u>Local Weather</u>     </div>
+
+<div id='m6'>
+<center><b><font color='white'>SPORT</font></b></center>
+&nbsp;&raquo; <u>Football News</u><br />
+&nbsp;&raquo; <u>Baseball News</u><br />
+&nbsp;&raquo; <u>Soccer News</u><br />
+&nbsp;&raquo; <u>Hockey News</u></div>
+
+<script>
+
+window.onload = function()
+{
+   ids1 = Array('m1', 'm2', 'm3')
+   ids2 = Array('m4', 'm5', 'm6')
+   Hide(Array(ids1, ids2))
+   Resize(Array(ids1, ids2), 150, 100)
+   Position(Array(ids1, ids2), FIX)
+
+   S(ids1, 'backgroundColor', 'red')
+   S(ids1, 'color', 'cyan')
+   Show(Array(ids1, ids2))
+   HoverSlideMenu(ids1, 'top', '%50', 21, 10, 200)
+
+   S(ids2, 'backgroundColor', 'green')
+   S(ids2, 'color', 'cyan')
+   HoverSlideMenu(ids2, 'bottom', '%50', 19, 10, 200)
+}
+
+</script>

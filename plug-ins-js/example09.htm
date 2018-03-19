@@ -1,0 +1,27 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+<html><head><title>Plug-in JavaScript: Example 9</title>
+
+<script src="PJ.js"></script>
+<script>Initialize()</script>
+
+</head><body>
+
+<div id='square'>I'm a square</div>
+
+<script>
+
+window.onload = function()
+{
+   S('square').width           = Px(100)
+   S('square').height          = Px(100)
+   S('square').backgroundColor = 'yellow'
+
+   alert("The value returned for the width of 'square' is: "   +
+      S('square').width + "\nAfter using NoPX() this becomes " +
+      NoPx(S('square').width))
+}
+
+</script>
+
+

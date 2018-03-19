@@ -1,0 +1,73 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+<html><head><title>Plug-in JavaScript: Example 66</title>
+
+<script src="PJ.js"></script>
+<script>Initialize()</script>
+
+</head><body>
+
+<span id='dock1'>
+<img id='i1a' src='i1.gif' />
+<img id='i2a' src='i2.gif' />
+<img id='i3a' src='i3.gif' />
+<img id='i4a' src='i4.gif' />
+<img id='i5a' src='i5.gif' />
+<img id='i6a' src='i6.gif' />
+</span>
+
+<!-- Uncomment the lines below to see the dock bar on other edges
+
+<span id='dock2'>
+<img id='i1b' src='i1.gif' />
+<img id='i2b' src='i2.gif' />
+<img id='i3b' src='i3.gif' />
+<img id='i4b' src='i4.gif' />
+<img id='i5b' src='i5.gif' />
+<img id='i6b' src='i6.gif' />
+</span>
+
+<span id='dock3'>
+<img id='i1c' src='i1.gif' /><br clear='all' />
+<img id='i2c' src='i2.gif' /><br clear='all' />
+<img id='i3c' src='i3.gif' /><br clear='all' />
+<img id='i4c' src='i4.gif' /><br clear='all' />
+<img id='i5c' src='i5.gif' /><br clear='all' />
+<img id='i6c' src='i6.gif' />
+</span>
+
+<span id='dock4'>
+<img id='i1d' src='i1.gif' /><br clear='all' />
+<img id='i2d' src='i2.gif' /><br clear='all' />
+<img id='i3d' src='i3.gif' /><br clear='all' />
+<img id='i4d' src='i4.gif' /><br clear='all' />
+<img id='i5d' src='i5.gif' /><br clear='all' />
+<img id='i6d' src='i6.gif' />
+</span>
+
+-->
+
+<script>
+
+window.onload = function()
+{
+   Position('dock1', FIX)
+   ids1 = Array('i1a', 'i2a', 'i3a', 'i4a', 'i5a', 'i6a')
+   DockBar('dock1', ids1, 'bottom', 32, 256)
+
+// Uncomment the lines below to see the dock bar on other edges
+
+// Position('dock2', FIX)
+// ids2 = Array('i1b', 'i2b', 'i3b', 'i4b', 'i5b', 'i6b')
+// DockBar('dock2', ids2, 'top',    32, 256)
+
+// Position('dock3', FIX)
+// ids3 = Array('i1c', 'i2c', 'i3c', 'i4c', 'i5c', 'i6c')
+// DockBar('dock3', ids3, 'left',   32, 256)
+
+// Position('dock4', FIX)
+// ids4 = Array('i1d', 'i2d', 'i3d', 'i4d', 'i5d', 'i6d')
+// DockBar('dock4', ids4, 'right',  32, 256)
+}
+
+</script>

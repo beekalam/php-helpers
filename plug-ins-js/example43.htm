@@ -1,0 +1,25 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+<html><head><title>Plug-in JavaScript: Example 43</title>
+
+<script src="PJ.js"></script>
+<script>Initialize()</script>
+
+</head><body>
+
+<img id='globe' src='i1.gif'>
+
+<script>
+
+window.onload = function()
+{
+   Position('globe', ABS)
+   Slide('globe', 0, 100, 450, 0, 1500, 0)
+
+   O('globe').onmouseover = function()
+      { Slide(this, 450, 0,  450, 50, 500, 1) }
+   O('globe').onmouseout  = function()
+      { Slide(this, 450, 50, 450, 0,  500, 1) }
+}
+
+</script>

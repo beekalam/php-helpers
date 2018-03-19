@@ -1,0 +1,25 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+<html><head><title>Plug-in JavaScript: Example 2</title>
+
+<script src="PJ.js"></script>
+<script>Initialize()</script>
+
+</head><body>
+
+Fred: <span id='Fred'></span><br />
+Mary: <span id='Mary'></span><br />
+Bill: <span id='Bill'></span>
+
+<script>
+
+window.onload = function()
+{
+   ids = Array('Fred', 'Mary', 'Bill')
+   O(ids, 'innerHTML', 'New contents...')
+   S('Fred').backgroundColor = 'red'
+   S('Mary').backgroundColor = 'blue'
+   S('Bill').backgroundColor = 'green'
+}
+
+</script>

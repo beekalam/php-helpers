@@ -1,0 +1,68 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+<html><head><title>Plug-in JavaScript: Example 59</title>
+
+<script src="PJ.js"></script>
+<script>Initialize()</script>
+
+</head><body>
+
+<table id='a' width='375' height='160'
+   cellpadding='0' cellspacing='0' bgcolor='black'>
+   <tr height='20'>
+      <td colspan='3'>
+         <font color='white' face='Verdana' size='5'>
+            <center>
+               <b>I'll Be Bach Music Store</b>
+            </center>
+         </font>
+      </td>
+   </tr>
+   <tr height='80'>
+      <td width='150' align='right'>
+         <img src='instruments.png'>
+      </td>
+      <td>
+         &nbsp;
+      </td>
+      <td width='315' valign='middle'>
+         <center>
+            <font face='Verdana' color='yellow'>
+               <u>New! - Special Offers</u><br />
+               <u>View our Guestbook</u><br />
+               <u>Follow us on Twitter</u><br />
+               <u>Read our Blog</u>
+            </font>
+         </center>
+      </td>
+   </tr>
+   <tr height='60'>
+      <td colspan='3'>
+         <img id='a' src='piano.png' />
+      </td>
+   </tr>
+</table>
+
+<br /><br /><br />
+<font face='Verdana'>
+   <center>
+      <font color='purple' size=5>
+         <b>The "I'll Be Bach" Music Store</b>
+      </font>
+   </center>
+   <br />
+   We pride ourselves in having the widest selection of instruments of
+   any music store, ranging from pianos, violins, flutes, and other
+   classical and band instruments, to the latest electric guitars,
+   keyboards, synthesizers and mixing equipment.
+</font>
+
+<script>
+
+window.onload = function()
+{
+   Position('a', FIX)
+   HoverSlide('a', 'top', '%50', 60, 300)
+}
+
+</script>

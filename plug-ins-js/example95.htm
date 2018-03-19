@@ -1,0 +1,31 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+<html><head><title>Plug-in JavaScript: Example 95</title>
+
+<script src="PJ.js"></script>
+<script>Initialize()</script>
+
+</head><body>
+
+<h3>Your credit card details:</h3>
+<font face='Courier New'>
+Card Number: <input id='ccnum' type='text' name='n' size='24' /><br />
+Expires: Month <input id='ccmonth' type='text' name='m' size='2'  />
+Year <input id='ccyear' type='text' name='y'  size='4'  /><br />
+<button id='button'>Submit Credit Card</button>
+
+<script>
+
+window.onload = function()
+{
+   O('button').onclick = function()
+   {
+      if (ValidateCreditCard(O('ccnum').value,
+         O('ccmonth').value, O('ccyear').value))
+            alert("That card validated successfully")
+      else alert("That card did not validate")
+   }
+}
+
+</script>
+

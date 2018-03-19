@@ -1,0 +1,35 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+<html><head><title>Plug-in JavaScript: Example 76</title>
+
+<script src="PJ.js"></script>
+<script>Initialize()</script>
+
+</head><body>
+
+<b>How to become a millionaire:<ul>
+   <li><font size='+4'>&nbsp;</font>
+      <span id='a'>Win the lottery</span></li>
+   <li><font size='+4'>&nbsp;</font>
+      <span id='b'>Inherit the money</span></li>
+   <li><font size='+4'>&nbsp;</font>
+      <span id='c'>Marry a millionaire</span></li>
+   <li><font size='+4'>&nbsp;</font>
+      <span id='d'>Become a movie or pop star</span></li>
+   <li><font size='+4'>&nbsp;</font>
+      <span id='e'>Invest $130/month in stocks for 40 years!</span></li>
+</ul></b>
+
+<script>
+
+window.onload = function()
+{
+   O(Array('a', 'b', 'c', 'd', 'e'), 'onmouseover', ripple)
+
+   function ripple()
+   {
+      TextRipple(this, 1, 500)
+   }
+}
+
+</script>

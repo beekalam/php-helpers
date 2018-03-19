@@ -1,0 +1,26 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+<html><head><title>Plug-in JavaScript: Example 39</title>
+
+<script src="PJ.js"></script>
+<script>Initialize()</script>
+
+</head><body>
+
+<center><br />
+<span id='sp1'>Crossover</span>
+<img id='i1' src='i3.gif' />
+<img id='i2' src='i4.gif' />
+
+<script>
+
+window.onload = function()
+{
+   Locate(Array('i1', 'i2'), ABS, 0, 0)
+   FadeToggle('i2', 1, 1)
+   O('sp1').onmouseover = function() { FadeBetween('i1', 'i2', 500, 1) }
+   O('sp1').onmouseout  = function() { FadeBetween('i2', 'i1', 500, 1) }
+}
+
+</script>
+

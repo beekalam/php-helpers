@@ -1,0 +1,31 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+<html id=test><head>
+<title id=fred>Plug-in JavaScript: Example 101</title>
+
+<script src="PJ.js"></script>
+<script>Initialize()</script>
+
+</head><body>
+
+<div id='enabled'><font size='2' face='Verdana'>
+This webpage has been <i>touch enabled</i>.&nbsp;
+<a href="javascript:TouchEnable(1)"
+title="Turn on touchscreen control">Activate</a> &#183;
+<a href="javascript:TouchEnable(0)"
+title="Turn off touchscreen control">Deactivate</a> &#183;
+[<a href="javascript:ZoomDown('enabled', 1, 1, 1000);
+FadeOut('enabled', 1000)"title="Remove this panel">x</a>]</font>
+<br /><font size='1' face='Verdana'>
+When activated you can touch anywhere to scroll this page
+using a touch screen</font></div>
+
+<script>
+Locate('enabled', 'fixed', 0, -100)
+S('enabled').backgroundColor = '#eeeeaa'
+S('enabled').padding         = '2px 5px 2px 5px'
+S('enabled').border          = 'dotted black 1px'
+Opacity('enabled', 0)
+GoToEdge('enabled', 'top', 50)
+FadeIn('enabled', 1000)
+</script>

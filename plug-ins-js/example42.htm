@@ -1,0 +1,36 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+<html><head><title>Plug-in JavaScript: Example 42</title>
+
+<script src="PJ.js"></script>
+<script>Initialize()</script>
+
+</head><body>
+
+<div id='democrat'><h2>Democrat Info</h2>
+The Democratic Party is one of the world's oldest parties, and<br />
+has the most registered voters of any party in the world as of<br />
+2004. It is considered to be left of center.<p>
+<a id='democrat' href='#'>Click to see Republican info</a></div>
+
+<div id='republican'><h2>Republican Info</h2>
+The Republican Party is often called the Grand Old Party or the<br />
+GOP, despite being the younger of the two major parties.  It is<br />
+considered to be right of center.<p>
+<a id='republican' href='#'>Click to see Democrat info</a></div>
+
+<script>
+
+window.onload = function()
+{
+   Hide('republican')
+   O('democrat').onclick   = toggle
+   O('republican').onclick = toggle
+
+   function toggle()
+   {
+      HideToggle(Array('democrat', 'republican'))
+   }
+}
+
+</script>

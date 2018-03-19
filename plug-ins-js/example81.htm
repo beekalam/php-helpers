@@ -1,0 +1,30 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+<html><head><title>Plug-in JavaScript: Example 81</title>
+
+<script src="PJ.js"></script>
+<script>Initialize()</script>
+
+</head><body>
+
+<span id='sound'></span>
+
+<img id='a1' src='avatar1.jpg'>
+<img id='a2' src='avatar2.jpg'>
+<img id='a3' src='avatar3.jpg'>
+<img id='a4' src='avatar4.jpg'>
+
+<script>
+
+window.onload = function()
+{
+   ids = Array('a1', 'a2', 'a3', 'a4')
+   O(ids, 'onmouseover', bloop)
+
+   function bloop()
+   {
+      PlaySound('sound', 'bloop.wav', 0)
+   }
+}
+
+</script>

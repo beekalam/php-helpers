@@ -1,0 +1,26 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+<html><head><title>Plug-in JavaScript: Example 61</title>
+
+<script src="PJ.js"></script>
+<script>Initialize()</script>
+
+</head><body>
+
+<center><a href=example61.htm>Reload</a><br /><br />
+<img id='a1' src='avatar1.jpg'>&nbsp; &nbsp;
+<img id='a2' src='avatar2.jpg'>&nbsp; &nbsp;
+<img id='a3' src='avatar3.jpg'>&nbsp; &nbsp;
+<img id='a4' src='avatar4.jpg'></center>
+
+<script>
+
+window.onload = function()
+{
+   O('a1').onmouseover = function() {PopDown('a1', 'fade',    1, 1, 500, 0)}
+   O('a2').onmouseover = function() {PopDown('a2', 'inflate', 1, 0, 500, 0)}
+   O('a3').onmouseover = function() {PopDown('a3', 'zoom',    1, 1, 500, 0)}
+   O('a4').onmouseover = function() {PopDown('a4', 'instant', 1, 1, 500, 0)}
+}
+
+</script>

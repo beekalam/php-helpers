@@ -1,0 +1,30 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+<html><head><title>Plug-in JavaScript: Example 87</title>
+
+<script src="PJ.js"></script>
+<script>Initialize()</script>
+
+</head><body>
+
+<div id='a'></div>
+
+<script>
+
+window.onload = function()
+{
+   url  = 'ajaxpost.php'
+   args = 'url=http://www.weather.gov/xml/current_obs/PANC.rss'
+   PostAjaxRequest('a', todiv, url, args)
+
+   function todiv()
+   {
+      var rss = this.replace(/\</g, '&lt;')
+      rss     =  rss.replace(/\>/g, '&gt;')
+      rss     =  rss.replace(/\n/g, '<br />')
+      O('a').innerHTML = rss
+   }
+}
+
+</script>
+

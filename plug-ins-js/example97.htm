@@ -1,0 +1,23 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+<html><head><title>Plug-in JavaScript: Example 97</title>
+
+<script src="PJ.js"></script>
+<script>Initialize()</script>
+
+</head><body>
+
+<script>
+
+window.onload = function()
+{
+   setInterval(mousecoords, INTERVAL)
+
+   function mousecoords()
+   {
+      Alert("Mouse X = " + MOUSE_X + " | Mouse Y = " + MOUSE_Y)
+   }
+}
+
+</script>
+

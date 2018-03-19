@@ -1,0 +1,260 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+<html id=test><head>
+<title id=fred>Plug-in JavaScript: Example 101</title>
+
+<script src="PJ.js"></script>
+<script>Initialize()</script>
+
+</head><body bgcolor=#ffffff>
+		<font face="Verdana" size="2" color="#444444" /><center>
+<div id=enabled><font size=2 face=Verdana>This webpage has been <i>touch enabled</i>.&nbsp; <a href="javascript:TouchEnable(1)" title="Turn on touchscreen control">Activate</a> &#183; <a href="javascript:TouchEnable(0)" title="Turn off touchscreen control">Deactivate</a> &#183; [<a href="javascript:ZoomDown('enabled', 1, 1, 1000);FadeOut('enabled', 1000)" title="Remove this panel">x</a>]</font><br /><font size=1 face=Verdana>When activated you can touch anywhere to scroll this page using a touch screen</font></div>
+
+		<table cellpadding="0" cellspacing="0" border="0" width="750" style="border-style: solid; border-width: 0 0 2px; border-color: #444444;">
+			<tr>
+				<td width="105" valign="bottom" align="right">
+					<img src="http://pluginphp.com/images/logo.gif" width="100" height="98" alt="A McGraw Hill Book" title="A McGraw Hill Book" />
+				</td>
+				<td width="645" align="center"><font face="Verdana" size="2" color="#444444" />
+					<font size="6">Plug-in PHP: 100 Power Solutions</font><br />
+
+					<font size="3">By Robin Nixon <font size="2">(McGraw Hill 2010, ISBN 978-0071666596)</font></font>
+					<br /><br />
+					<a href="/" title="Home Page">Home</a> |
+					<a href="http://www.bookstore.mcgraw-hill.com/product.php?isbn=0071666591" title="The book" target="_blank">About</a> |
+					<a href="http://www.amazon.co.uk/gp/product/0071666591?ie=UTF8&tag=lephmyja-21&linkCode=as2&camp=1634&creative=6738&creativeASIN=0071666591" target="_blank">Buy It</a><img src="http://www.assoc-amazon.co.uk/e/ir?t=lephmyja-21&l=as2&o=2&a=0071666591" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" /> |
+					<a href="http://pluginphp.forumotion.net" title="The forum of the book" target="_blank">Forum</a> |
+					<a href="http://pluginphp.com/plug-ins.zip" title="Download all Plug-ins">Download</a>
+
+				</td>
+			</tr>
+		</table><br />
+		
+		<b>Chapter</b>:
+		<a href="1.php" title="Chapter 1: Building a Development Server">1</a>
+		&nbsp;<a href="2.php" title="Chapter 2: PHP and Plug-ins">2</a>
+		&nbsp;<a href="3.php" title="Chapter 3: Text Processing Plug-ins">3</a>
+
+		&nbsp;<a href="4.php" title="Chapter 4: Image Handling Plug-ins">4</a>
+		&nbsp;<a href="5.php" title="Chapter 5: Content Management Plug-ins">5</a>
+		&nbsp;<a href="6.php" title="Chapter 6: Forms and User Input Plug-ins">6</a>
+		&nbsp;<a href="7.php" title="Chapter 7: Internet Plug-ins">7</a>
+		&nbsp;<a href="8.php" title="Chapter 8: Chat, Messaging and Bulletin Board Plug-ins">8</a>
+		&nbsp;<a href="9.php" title="Chapter 9: Authentication and Security Plug-ins">9</a>
+
+		<a href="10.php" title="Chapter 10: Third Party Service Plug-ins">10</a>
+		<a href="11.php" title="Chapter 11: JavaScript Plug-ins">11</a>
+		<a href="12.php" title="Chapter 12: Diverse Plug-ins">12</a>
+		<br />
+	<table width="750">
+		<tr>
+			<td colspan="3">
+
+				<p align="justify"><p align="justify">PHP was originally developed in 1994 by Rasmus Lerdorf to replace a set of Perl scripts he had been using to maintain his personal website. Even in the early days Lerdof intended that PHP should be flexible and easily expandable, and through rewrites of the language parser, that has remained a key ethos of the project to this day, with numerous extension libraries available through the PEAR (PHP Extension and Application Repository) add-on. But simply having access to all these functions isn't very useful when you need to quickly put together a project to a tight deadline, because they typically provide very specific functionality. That's where this book comes into its own because it provides 100 ready-to-go plug-ins you can simply drop into your programs and use, normally with a simple, single call.</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="49%" align="right">
+				<img src="http://pluginphp.com/images/cover-med.png" width="327" height="394" alt="Plug-in PHP Book Cover" title="Plug-in PHP: 100 Power Solutions" /> 
+			</td>
+			<td width="2%"></td>
+			<td width="49%" valign="top" align="left"><font size="4">
+
+				<h2>CONTENTS</h2></font>
+					<table border="0" cellpadding="0" cellspacing="0" style="font-size:13pt;">
+               <tr><td align="right">1.</td> <td>&nbsp;<a  href="1.php">Building a Development Server</a></td></tr>
+					<tr><td align="right">2.</td> <td>&nbsp;<a  href="2.php">PHP and Plug-ins</a></td></tr>
+					<tr><td align="right">3.</td> <td>&nbsp;<a  href="3.php">Text Processing</a></td></tr>
+
+					<tr><td align="right">4.</td> <td>&nbsp;<a  href="4.php">Image Handling</a></td></tr>
+					<tr><td align="right">5.</td> <td>&nbsp;<a  href="5.php">Content Management</a></td></tr>
+					<tr><td align="right">6.</td> <td>&nbsp;<a  href="6.php">Forms and User Input</a></td></tr>
+					<tr><td align="right">7.</td> <td>&nbsp;<a  href="7.php">The Internet</a></td></tr>
+
+					<tr><td align="right">8.</td> <td>&nbsp;<a  href="8.php">Chat and Messaging</a></td></tr>
+					<tr><td align="right">9.</td> <td>&nbsp;<a  href="9.php">MySQL, Sessions and Cookies</a></td></tr>
+					<tr><td align="right">10.</td><td>&nbsp;<a href="10.php">APIs, RSS and XML</a></td></tr>
+					<tr><td align="right">11.</td><td>&nbsp;<a href="11.php">Incorporating JavaScript</a></td></tr>
+
+					<tr><td align="right">12.</td><td>&nbsp;<a href="12.php">Diverse Solutions</a></td></tr></table>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="3">
+				<p align="justify">The types of plug-ins supplied offer quick and simple solutions to a very wide range of problems including processing text in a variety of ways, uploading and manipulating images, server content management, form handling, user input validation, chat and messaging, user authentication and security, integrating with third party websites, and much more besides.</p>
+
+				<p align="justify"><i><a href="http://robinnixon.com">Robin Nixon</a> is a computer journalist who has also developed numerous websites using PHP, MySQL and JavaScript. He has written over 500 articles and authored <a href="http://www.amazon.com/Robin-Nixon/e/B002K8U1WC/">several books on computing</a>. You may also be interested in Robin's other book on PHP, <a href="http://lpmj.net">Learning PHP, MySQL & JavaScript</a>. Robin is also the author of <a href="http://ubuntubook.net">Ubuntu: Up and Running</a></i>.</p>
+
+			</td>
+		</tr>
+	</table>
+		<font face="Verdana" size="2" color="#444444" /><center>
+		<table cellpadding="0" cellspacing="0" border="0" width="750" style="border-style: solid; border-width: 0 0 2px; border-color: #444444;">
+			<tr>
+				<td width="105" valign="bottom" align="right">
+					<img src="http://pluginphp.com/images/logo.gif" width="100" height="98" alt="A McGraw Hill Book" title="A McGraw Hill Book" />
+				</td>
+				<td width="645" align="center"><font face="Verdana" size="2" color="#444444" />
+					<font size="6">Plug-in PHP: 100 Power Solutions</font><br />
+
+					<font size="3">By Robin Nixon <font size="2">(McGraw Hill 2010, ISBN 978-0071666596)</font></font>
+					<br /><br />
+					<a href="/" title="Home Page">Home</a> |
+					<a href="http://www.bookstore.mcgraw-hill.com/product.php?isbn=0071666591" title="The book" target="_blank">About</a> |
+					<a href="http://www.amazon.co.uk/gp/product/0071666591?ie=UTF8&tag=lephmyja-21&linkCode=as2&camp=1634&creative=6738&creativeASIN=0071666591" target="_blank">Buy It</a><img src="http://www.assoc-amazon.co.uk/e/ir?t=lephmyja-21&l=as2&o=2&a=0071666591" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" /> |
+					<a href="http://pluginphp.forumotion.net" title="The forum of the book" target="_blank">Forum</a> |
+					<a href="http://pluginphp.com/plug-ins.zip" title="Download all Plug-ins">Download</a>
+
+				</td>
+			</tr>
+		</table><br />
+		
+		<b>Chapter</b>:
+		<a href="1.php" title="Chapter 1: Building a Development Server">1</a>
+		&nbsp;<a href="2.php" title="Chapter 2: PHP and Plug-ins">2</a>
+		&nbsp;<a href="3.php" title="Chapter 3: Text Processing Plug-ins">3</a>
+
+		&nbsp;<a href="4.php" title="Chapter 4: Image Handling Plug-ins">4</a>
+		&nbsp;<a href="5.php" title="Chapter 5: Content Management Plug-ins">5</a>
+		&nbsp;<a href="6.php" title="Chapter 6: Forms and User Input Plug-ins">6</a>
+		&nbsp;<a href="7.php" title="Chapter 7: Internet Plug-ins">7</a>
+		&nbsp;<a href="8.php" title="Chapter 8: Chat, Messaging and Bulletin Board Plug-ins">8</a>
+		&nbsp;<a href="9.php" title="Chapter 9: Authentication and Security Plug-ins">9</a>
+
+		<a href="10.php" title="Chapter 10: Third Party Service Plug-ins">10</a>
+		<a href="11.php" title="Chapter 11: JavaScript Plug-ins">11</a>
+		<a href="12.php" title="Chapter 12: Diverse Plug-ins">12</a>
+		<br />
+	<table width="750">
+		<tr>
+			<td colspan="3">
+
+				<p align="justify"><p align="justify">PHP was originally developed in 1994 by Rasmus Lerdorf to replace a set of Perl scripts he had been using to maintain his personal website. Even in the early days Lerdof intended that PHP should be flexible and easily expandable, and through rewrites of the language parser, that has remained a key ethos of the project to this day, with numerous extension libraries available through the PEAR (PHP Extension and Application Repository) add-on. But simply having access to all these functions isn't very useful when you need to quickly put together a project to a tight deadline, because they typically provide very specific functionality. That's where this book comes into its own because it provides 100 ready-to-go plug-ins you can simply drop into your programs and use, normally with a simple, single call.</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="49%" align="right">
+				<img src="http://pluginphp.com/images/cover-med.png" width="327" height="394" alt="Plug-in PHP Book Cover" title="Plug-in PHP: 100 Power Solutions" /> 
+			</td>
+			<td width="2%"></td>
+			<td width="49%" valign="top" align="left"><font size="4">
+
+				<h2>CONTENTS</h2></font>
+					<table border="0" cellpadding="0" cellspacing="0" style="font-size:13pt;">
+               <tr><td align="right">1.</td> <td>&nbsp;<a  href="1.php">Building a Development Server</a></td></tr>
+					<tr><td align="right">2.</td> <td>&nbsp;<a  href="2.php">PHP and Plug-ins</a></td></tr>
+					<tr><td align="right">3.</td> <td>&nbsp;<a  href="3.php">Text Processing</a></td></tr>
+
+					<tr><td align="right">4.</td> <td>&nbsp;<a  href="4.php">Image Handling</a></td></tr>
+					<tr><td align="right">5.</td> <td>&nbsp;<a  href="5.php">Content Management</a></td></tr>
+					<tr><td align="right">6.</td> <td>&nbsp;<a  href="6.php">Forms and User Input</a></td></tr>
+					<tr><td align="right">7.</td> <td>&nbsp;<a  href="7.php">The Internet</a></td></tr>
+
+					<tr><td align="right">8.</td> <td>&nbsp;<a  href="8.php">Chat and Messaging</a></td></tr>
+					<tr><td align="right">9.</td> <td>&nbsp;<a  href="9.php">MySQL, Sessions and Cookies</a></td></tr>
+					<tr><td align="right">10.</td><td>&nbsp;<a href="10.php">APIs, RSS and XML</a></td></tr>
+					<tr><td align="right">11.</td><td>&nbsp;<a href="11.php">Incorporating JavaScript</a></td></tr>
+
+					<tr><td align="right">12.</td><td>&nbsp;<a href="12.php">Diverse Solutions</a></td></tr></table>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="3">
+				<p align="justify">The types of plug-ins supplied offer quick and simple solutions to a very wide range of problems including processing text in a variety of ways, uploading and manipulating images, server content management, form handling, user input validation, chat and messaging, user authentication and security, integrating with third party websites, and much more besides.</p>
+
+				<p align="justify"><i><a href="http://robinnixon.com">Robin Nixon</a> is a computer journalist who has also developed numerous websites using PHP, MySQL and JavaScript. He has written over 500 articles and authored <a href="http://www.amazon.com/Robin-Nixon/e/B002K8U1WC/">several books on computing</a>. You may also be interested in Robin's other book on PHP, <a href="http://lpmj.net">Learning PHP, MySQL & JavaScript</a>. Robin is also the author of <a href="http://ubuntubook.net">Ubuntu: Up and Running</a></i>.</p>
+
+			</td>
+		</tr>
+	</table>
+   		<font face="Verdana" size="2" color="#444444" /><center>
+		<table cellpadding="0" cellspacing="0" border="0" width="750" style="border-style: solid; border-width: 0 0 2px; border-color: #444444;">
+			<tr>
+				<td width="105" valign="bottom" align="right">
+					<img src="http://pluginphp.com/images/logo.gif" width="100" height="98" alt="A McGraw Hill Book" title="A McGraw Hill Book" />
+				</td>
+				<td width="645" align="center"><font face="Verdana" size="2" color="#444444" />
+					<font size="6">Plug-in PHP: 100 Power Solutions</font><br />
+
+					<font size="3">By Robin Nixon <font size="2">(McGraw Hill 2010, ISBN 978-0071666596)</font></font>
+					<br /><br />
+					<a href="/" title="Home Page">Home</a> |
+					<a href="http://www.bookstore.mcgraw-hill.com/product.php?isbn=0071666591" title="The book" target="_blank">About</a> |
+					<a href="http://www.amazon.co.uk/gp/product/0071666591?ie=UTF8&tag=lephmyja-21&linkCode=as2&camp=1634&creative=6738&creativeASIN=0071666591" target="_blank">Buy It</a><img src="http://www.assoc-amazon.co.uk/e/ir?t=lephmyja-21&l=as2&o=2&a=0071666591" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" /> |
+					<a href="http://pluginphp.forumotion.net" title="The forum of the book" target="_blank">Forum</a> |
+					<a href="http://pluginphp.com/plug-ins.zip" title="Download all Plug-ins">Download</a>
+
+				</td>
+			</tr>
+		</table><br />
+		
+		<b>Chapter</b>:
+		<a href="1.php" title="Chapter 1: Building a Development Server">1</a>
+		&nbsp;<a href="2.php" title="Chapter 2: PHP and Plug-ins">2</a>
+		&nbsp;<a href="3.php" title="Chapter 3: Text Processing Plug-ins">3</a>
+
+		&nbsp;<a href="4.php" title="Chapter 4: Image Handling Plug-ins">4</a>
+		&nbsp;<a href="5.php" title="Chapter 5: Content Management Plug-ins">5</a>
+		&nbsp;<a href="6.php" title="Chapter 6: Forms and User Input Plug-ins">6</a>
+		&nbsp;<a href="7.php" title="Chapter 7: Internet Plug-ins">7</a>
+		&nbsp;<a href="8.php" title="Chapter 8: Chat, Messaging and Bulletin Board Plug-ins">8</a>
+		&nbsp;<a href="9.php" title="Chapter 9: Authentication and Security Plug-ins">9</a>
+
+		<a href="10.php" title="Chapter 10: Third Party Service Plug-ins">10</a>
+		<a href="11.php" title="Chapter 11: JavaScript Plug-ins">11</a>
+		<a href="12.php" title="Chapter 12: Diverse Plug-ins">12</a>
+		<br />
+	<table width="750">
+		<tr>
+			<td colspan="3">
+
+				<p align="justify"><p align="justify">PHP was originally developed in 1994 by Rasmus Lerdorf to replace a set of Perl scripts he had been using to maintain his personal website. Even in the early days Lerdof intended that PHP should be flexible and easily expandable, and through rewrites of the language parser, that has remained a key ethos of the project to this day, with numerous extension libraries available through the PEAR (PHP Extension and Application Repository) add-on. But simply having access to all these functions isn't very useful when you need to quickly put together a project to a tight deadline, because they typically provide very specific functionality. That's where this book comes into its own because it provides 100 ready-to-go plug-ins you can simply drop into your programs and use, normally with a simple, single call.</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="49%" align="right">
+				<img src="http://pluginphp.com/images/cover-med.png" width="327" height="394" alt="Plug-in PHP Book Cover" title="Plug-in PHP: 100 Power Solutions" /> 
+			</td>
+			<td width="2%"></td>
+			<td width="49%" valign="top" align="left"><font size="4">
+
+				<h2>CONTENTS</h2></font>
+					<table border="0" cellpadding="0" cellspacing="0" style="font-size:13pt;">
+               <tr><td align="right">1.</td> <td>&nbsp;<a  href="1.php">Building a Development Server</a></td></tr>
+					<tr><td align="right">2.</td> <td>&nbsp;<a  href="2.php">PHP and Plug-ins</a></td></tr>
+					<tr><td align="right">3.</td> <td>&nbsp;<a  href="3.php">Text Processing</a></td></tr>
+
+					<tr><td align="right">4.</td> <td>&nbsp;<a  href="4.php">Image Handling</a></td></tr>
+					<tr><td align="right">5.</td> <td>&nbsp;<a  href="5.php">Content Management</a></td></tr>
+					<tr><td align="right">6.</td> <td>&nbsp;<a  href="6.php">Forms and User Input</a></td></tr>
+					<tr><td align="right">7.</td> <td>&nbsp;<a  href="7.php">The Internet</a></td></tr>
+
+					<tr><td align="right">8.</td> <td>&nbsp;<a  href="8.php">Chat and Messaging</a></td></tr>
+					<tr><td align="right">9.</td> <td>&nbsp;<a  href="9.php">MySQL, Sessions and Cookies</a></td></tr>
+					<tr><td align="right">10.</td><td>&nbsp;<a href="10.php">APIs, RSS and XML</a></td></tr>
+					<tr><td align="right">11.</td><td>&nbsp;<a href="11.php">Incorporating JavaScript</a></td></tr>
+
+					<tr><td align="right">12.</td><td>&nbsp;<a href="12.php">Diverse Solutions</a></td></tr></table>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="3">
+				<p align="justify">The types of plug-ins supplied offer quick and simple solutions to a very wide range of problems including processing text in a variety of ways, uploading and manipulating images, server content management, form handling, user input validation, chat and messaging, user authentication and security, integrating with third party websites, and much more besides.</p>
+
+				<p align="justify"><i><a href="http://robinnixon.com">Robin Nixon</a> is a computer journalist who has also developed numerous websites using PHP, MySQL and JavaScript. He has written over 500 articles and authored <a href="http://www.amazon.com/Robin-Nixon/e/B002K8U1WC/">several books on computing</a>. You may also be interested in Robin's other book on PHP, <a href="http://lpmj.net">Learning PHP, MySQL & JavaScript</a>. Robin is also the author of <a href="http://ubuntubook.net">Ubuntu: Up and Running</a></i>.</p>
+
+			</td>
+		</tr>
+	</table>
+<script>
+
+Locate('enabled', 'fixed', 0, -100)
+S('enabled').backgroundColor = '#eeeeaa'
+S('enabled').padding         = '2px 5px 2px 5px'
+S('enabled').border          = 'dotted black 1px'
+Opacity('enabled', 0)
+GoToEdge('enabled', 'top', 50)
+FadeIn('enabled', 1000)
+
+</script>
+

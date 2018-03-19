@@ -1,0 +1,23 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+<html><head><title>Plug-in JavaScript: Example 28</title>
+
+<script src="PJ.js"></script>
+<script>Initialize()</script>
+
+</head><body>
+
+<div id='test'>&nbsp;Test div</div>
+
+<script>
+
+window.onload = function()
+{
+   Locate('test', ABS, 20, 20)
+   Resize('test', 100, 100)
+   S('test').border = 'solid ' + Px(1)
+   CenterX('test')
+}
+
+</script>
+

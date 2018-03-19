@@ -1,0 +1,37 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+<html><head><title>Plug-in JavaScript: Example 7</title>
+
+<script src="PJ.js"></script>
+<script>Initialize()</script>
+
+</head><body>
+
+What is your name? <b><span id='name'></span></b>
+
+<script>
+
+window.onload = function()
+{
+   input('name')
+
+   function input(id)
+   {
+      var interrupt = setInterval(simpleInterrupt, INTERVAL)
+
+      function simpleInterrupt()
+      {
+         var k = GetLastKey()
+
+         if (k == 'Enter')
+         {
+            k = '.'
+            clearInterval(interrupt)
+         }
+         O(id).innerHTML += k
+      }
+   }
+}
+
+</script>
+

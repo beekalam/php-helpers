@@ -1,0 +1,25 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+<html><head><title>Plug-in JavaScript: Example 35</title>
+
+<script src="PJ.js"></script>
+<script>Initialize()</script>
+
+</head><body>
+
+<center><br />
+<img id='i1' src='i1.gif' />
+<img id='i2' src='i2.gif' />
+
+<script>
+
+window.onload = function()
+{
+   O('i1').onmouseover = function() { Fade('i1', 100, 0, 1000, 0) }
+   O('i1').onmouseout  = function() { Fade('i1', 0, 100, 1000, 0) }
+   O('i2').onmouseover = function() { Fade('i2', 100, 0, 1000, 1) }
+   O('i2').onmouseout  = function() { Fade('i2', 0, 100, 1000, 1) }
+}
+
+</script>
+

@@ -1,0 +1,26 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+<html><head><title>Plug-in JavaScript: Example 93</title>
+
+<script src="PJ.js"></script>
+<script>Initialize()</script>
+
+</head><body>
+
+Password: <input id='pass' type='password' name='pass' />
+<button id='button'>Submit</button>
+
+<script>
+
+window.onload = function()
+{
+   O('button').onclick = function()
+   {
+      if (ValidatePassword(O('pass').value, 8, 16, 1, 1, 1, 1))
+         alert("That password is valid")
+      else alert("That password is invalid")
+   }
+}
+
+</script>
+
