@@ -933,10 +933,6 @@ function Input(name){
  }
 
 //-------------------------------------------------------------------------
-
-
-
-
 function isjson(txt){
   try {
      var json = JSON.parse(txt);
@@ -946,3 +942,71 @@ function isjson(txt){
   return true;
 }
 
+
+function val(add){
+    return $(add).val();
+}
+function sval(add,val){
+    $(add).val(val);
+}
+
+function SetVisible(m) {
+    document.getElementById(m).style.visibility='';
+}
+
+function SetHidden(m) {
+    document.getElementById(m).style.visibility='hidden';
+}
+//------------------------------------------------------------------------------
+
+String.prototype.toFaDigit = function() {
+    return this.replace(/\d+/g, function(digit) {
+        var ret = '';
+        for (var i = 0, len = digit.length; i < len; i++) {
+            ret += String.fromCharCode(digit.charCodeAt(i) + 1728);
+        }
+        return ret;
+    });
+};
+String.prototype.toEnDigit = function() {
+    return this.replace(/[\u06F0-\u06F9]+/g, function(digit) {
+        var ret = '';
+        for (var i = 0, len = digit.length; i < len; i++) {
+            ret += String.fromCharCode(digit.charCodeAt(i) - 1728);
+        }
+        return ret;
+    });
+};
+
+function hazfe_fasele(id){
+    var mytext = $('#'+id).val().trim();
+    var mytext = mytext.replace(/ا /g, 'ا');
+    var mytext = mytext.replace(/د /g, 'د');
+    var mytext = mytext.replace(/ذ /g, 'ذ');
+    var mytext = mytext.replace(/و /g, 'و');
+    var mytext = mytext.replace(/ر /g, 'ر');
+    var mytext = mytext.replace(/ز /g, 'ز');
+    var mytext = mytext.replace(/ژ /g, 'ژ');
+    var mytext = mytext.replace(/0 /g, '0');
+    var mytext = mytext.replace(/1 /g, '1');
+    var mytext = mytext.replace(/2 /g, '2');
+    var mytext = mytext.replace(/3 /g, '3');
+    var mytext = mytext.replace(/4 /g, '4');
+    var mytext = mytext.replace(/5 /g, '5');
+    var mytext = mytext.replace(/6 /g, '6');
+    var mytext = mytext.replace(/7 /g, '7');
+    var mytext = mytext.replace(/8 /g, '8');
+    var mytext = mytext.replace(/9 /g, '9');
+    var mytext = mytext.replace(/  /g, ' ');
+    var mytext = mytext.replace(/۰ /g, '۰');
+    var mytext = mytext.replace(/۱ /g, '۱');
+    var mytext = mytext.replace(/۲ /g, '۲');
+    var mytext = mytext.replace(/۳ /g, '۳');
+    var mytext = mytext.replace(/۴ /g, '۴');
+    var mytext = mytext.replace(/۵ /g, '۵');
+    var mytext = mytext.replace(/۶ /g, '۶');
+    var mytext = mytext.replace(/۷ /g, '۷');
+    var mytext = mytext.replace(/۸ /g, '۸');
+    var mytext = mytext.replace(/۹ /g, '۹');
+    $('#'+id).val(mytext);
+}

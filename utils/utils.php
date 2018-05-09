@@ -1219,3 +1219,21 @@ function is_persian_date($in){
 	}
 	return false;
 }
+function isset_or_default(&$in,$k,$default)
+{
+    if(!isset($in[$k])) $in[$k] = $default;
+}
+
+function svg_circle_percent($in=array())
+{
+    isset_or_default($in,"fill","green");
+    isset_or_default($in,"stroke","#337AB7");
+    isset_or_default($in,"width",110);
+    isset_or_default($in,"height",110);
+    isset_or_default($in,"arc_x",41.0);
+    isset_or_default($in,"arc_y",20.0);
+    $d = sprintf("M 54.99999999999999 18.5 A 37.5 37.5 0 1 1 %s %s",$in["arc_x"],$in["arc_y"]);
+    return '<svg height="'.$in['height'].'" width="'.$in['width'].'">' .
+                '<path stroke-width="5" fill="transparent" stroke="'.$in['stroke'].'" d="'.$d.'"></path>'.
+            '</svg>';
+}

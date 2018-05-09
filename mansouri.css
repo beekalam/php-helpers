@@ -1,5 +1,19 @@
+/****************** direction **************************/
 .ltr{ direction: ltr !important; }
 .rtl{ direction: rtl !important; }
+.text-center,txt_center {
+    text-align: center !important;
+}
+.txt_left{
+	text-align: left !important;
+}
+txt_right{
+	text-align: right !important;
+}
+.textjustify{
+	text-align: justify;
+}
+/*********************** font /text **************************/
 .persian-number{
 	font-family: IranSans !important;
 }
@@ -29,105 +43,6 @@
 	font-family: IranSans !important;
 	font-size: 13px !important;
 	font-weight: bold;
-}
-.dataTables_info{
-	font-family: IranSans !important;   
-}
-.border-radius-5px{
-	border-radius: 5px !important;
-}
-.border-radius-10px{
-	border-radius: 10px !import;
-}
-.bor3px{
-	border-radius: 3px !important;
-}
-.bor5px{
-	border-radius: 5px !important;
-}
-.bor10px{
-	border-radius: 10px !important;
-}
-.persian-font{
-	font-family: IranSans !important;   
-}
-/* ********************************** */
-/* for sweetalert */
-div.sweet-alert{
-	border-radius: 10px !important;
-}
-button.confirm{
-	border-radius: 5px !important;   
-}
-.sweet-overlay{
-	z-index: 15000 !important
-}
-.sweet-alert{
-	z-index: 16000 !important;
-}
-.sa-button-container button{
-	border-radius: 5px !important;
-}
-/* ********************************** */
-.theme-box{
-	width: 30px;
-	height: 30px;
-}
-/* *********************************** */
-.bos{
-    box-shadow: 0 2px 5px 0 rgba(0,0,0,.15);
-}
-
-.bor10px{
-    border-radius: 5px !important;
-}
-.bor10px{
-    border-radius: 10px !important;
-}
-bor3px{
-    border-radius: 3px !important;
-}
-
-.half-transparent {
-	filter: alpha(opacity=50); /* IE5-8 */
-	opacity: 0.5;
-}
-
-/* ********************************** */
-.border2px{
-	border: 2px solid #000;
-}
-.bordernone{
-	border:none;
-}
-.wrapper80percent{
-	width:80%;
-	margin:20px auto 40px auto;
-	background-color:#fff;
-	color:#333;
-}
-
-.bold{
-	font-weight: bold !important;
-}
-.txt_black{
-	color: black !important;
-	text-decoration: none !important;
-}
-.txt_white{
-	color: white !important;
-}
-.txt_org{
-	color:#ff6600 !important;
-}
-.txt_org{
-	color:rgba(126,126,126,1.00)
-}
-.text-center {
-    text-align: center !important;
-}
-.cursp{
-	cursor: pointer !important;
 }
 
 .font10{
@@ -169,6 +84,123 @@ bor3px{
 .font19{
 		font-size: 19px !important;
 }
+.persian-font{
+	font-family: IranSans !important;   
+}
+.bold{
+	font-weight: bold !important;
+}
+.txt_black{
+	color: black !important;
+	text-decoration: none !important;
+}
+.txt_white{
+	color: white !important;
+}
+.txt_org{
+	color:#ff6600 !important;
+}
+.txt_org{
+	color:rgba(126,126,126,1.00)
+}
 
 
+/********************** border ***********************************/
+.bordernone, .noborder{
+	border:none !important;
+}
+.border-radius-5px{
+	border-radius: 5px !important;
+}
+.border-radius-10px{
+	border-radius: 10px !import;
+}
+.bor3px{
+	border-radius: 3px !important;
+}
+.bor5px{
+	border-radius: 5px !important;
+}
+.bor10px{
+	border-radius: 10px !important;
+}
+.bor10px{
+    border-radius: 5px !important;
+}
+.bor10px{
+    border-radius: 10px !important;
+}
+bor3px{
+    border-radius: 3px !important;
+}
+.border2px{
+	border: 2px solid #000;
+}
+/******************* padding / margin *******************************/
+.nopadding{
+	.padding:0 !important;
+}
+.nomargin{
+	.margin:0 !important;
+}
+/* ********************************** */
+/* for sweetalert */
+div.sweet-alert{
+	border-radius: 10px !important;
+}
+button.confirm{
+	border-radius: 5px !important;   
+}
+.sweet-overlay{
+	z-index: 15000 !important
+}
+.sweet-alert{
+	z-index: 16000 !important;
+}
+.sa-button-container button{
+	border-radius: 5px !important;
+}
+/* ********************************** */
+.theme-box{
+	width: 30px;
+	height: 30px;
+}
+/* *********************************** */
+.bos{
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.15);
+}
 
+.half-transparent {
+	filter: alpha(opacity=50); /* IE5-8 */
+	opacity: 0.5;
+}
+
+.wrapper80percent{
+	width:80%;
+	margin:20px auto 40px auto;
+	background-color:#fff;
+	color:#333;
+}
+
+.cursp{
+	cursor: pointer !important;
+}
+
+/*********************************************************************************************/
+.width100p{
+	width:100% !important;
+}
+
+/**** experimental **** */
+/*exapmle usage */
+/*And then use <div class="row row-eq-height"> instead of <div class="row">.*/
+/*.row-eq-height {*/
+	/*display: -webkit-box;*/
+	/*display: -webkit-flex;*/
+	/*display: -ms-flexbox;*/
+	/*display: flex;*/
+/*}*/
+
+.dataTables_info{
+	font-family: IranSans !important;   
+}

@@ -354,3 +354,39 @@ function convert_codepint_to_farsi($string){
 }
 
 // convert_codepint_to_farsi("\u0698\u0647\u0645\u0698\u0647\u0645\ufea7\ufea5");
+
+
+
+function utf8_to_unicode($str) {
+
+    $unicode = array();        
+    $values = array();
+    $lookingFor = 1;
+
+    for ($i = 0; $i < strlen($str); $i++) {
+
+        $thisValue = ord($str[$i]);
+
+        if ($thisValue < 128) 
+            $unicode[] = str_pad(dechex($thisValue), 4, "0", STR_PAD_LEFT);
+        else {
+            if (count($values) == 0) $lookingFor = ($thisValue < 224) ? 2 : 3;                
+            $values[] = $thisValue;                
+            if (count($values) == $lookingFor) {
+                $number = ($lookingFor == 3) ?
+                (($values[0] % 16) * 4096) + (($values[1] % 64) * 64) + ($values[2] % 64):
+                (($values[0] % 32) * 64) + ($values[1] % 64);
+                $number = strtoupper(dechex($number));
+                $unicode[] = str_pad($number, 4, "0", STR_PAD_LEFT);
+                $values = array();
+                $lookingFor = 1;
+            } // if
+        } // if
+    } // for
+    $str="";
+    foreach ($unicode as $key => $value) {
+        $str .= $value;
+    }
+
+    return ($str);   
+} // utf8_to_unicode
