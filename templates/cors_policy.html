@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>cors</title>
+</head>
+
+<body>
+    <iframe src="https://farahoosh.ir/" width="800" height="800" name='demo'>
+    </iframe>
+</body>
+
+<script>
+	document.getElementsByName('demo')[0].onload = function(){
+		try{
+			console.log(frames[0].hostname);
+		}catch(e){
+			console.log(e);
+		}
+	}
+</script>
+</html>

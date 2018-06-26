@@ -692,8 +692,8 @@ var Weekdays = new Array("Sunday", "Monday", "Tuesday", "Wednesday",
 
 function leap_gregorian(year) {
 
-    return ((year % 4) == 0) &amp;&amp;
-            (!(((year % 100) == 0) &amp;&amp; ((year % 400) != 0)));
+    return ((year % 4) == 0) &&
+            (!(((year % 100) == 0) && ((year % 400) != 0)));
 
 }
 
@@ -709,7 +709,7 @@ function gregorian_to_jd(year, month, day) {
            (-Math.floor((year - 1) / 100)) +
            Math.floor((year - 1) / 400) +
            Math.floor((((367 * month) - 362) / 12) +
-           ((month &lt;= 2) ? 0 :
+           ((month <= 2) ? 0 :
                                (leap_gregorian(year) ? -1 : -2)
            ) +
            day);
@@ -739,7 +739,7 @@ function jd_to_gregorian(jd) {
     
 }
     yearday = wjd - gregorian_to_jd(year, 1, 1);
-    leapadj = ((wjd &lt; gregorian_to_jd(year, 3, 1)) ? 0
+    leapadj = ((wjd < gregorian_to_jd(year, 3, 1)) ? 0
                                                   :
                   (leap_gregorian(year) ? 1 : 2)
               );
@@ -754,7 +754,7 @@ function jd_to_gregorian(jd) {
 
 function leap_persian(year) {
 
-    return ((((((year - ((year &gt; 0) ? 474 : 473)) % 2820) + 474) + 38) * 682) % 2816) &lt; 682;
+    return ((((((year - ((year > 0) ? 474 : 473)) % 2820) + 474) + 38) * 682) % 2816) < 682;
 
 }
 
@@ -768,10 +768,10 @@ var PERSIAN_WEEKDAYS = new Array("دوشنبه", "یکشنبه",
 function persian_to_jd(year, month, day) {
 
     var epbase, epyear;
-    epbase = year - ((year &gt;= 0) ? 474 : 473);
+    epbase = year - ((year >= 0) ? 474 : 473);
     epyear = 474 + mod(epbase, 2820);
     return day +
-            ((month &lt;= 7) ?
+            ((month <= 7) ?
                 ((month - 1) * 31) :
                 (((month - 1) * 30) + 6)
             ) +
@@ -804,13 +804,13 @@ function jd_to_persian(jd) {
     
 }
     year = ycycle + (2820 * cycle) + 474;
-    if (year &lt;= 0) {
+    if (year <= 0) {
 
         year--;
     
 }
     yday = (jd - persian_to_jd(year, 1, 1)) + 1;
-    month = (yday &lt;= 186) ? Math.ceil(yday / 31) : Math.ceil((yday - 6) / 30);
+    month = (yday <= 186) ? Math.ceil(yday / 31) : Math.ceil((yday - 6) / 30);
     day = (jd - persian_to_jd(year, month, 1)) + 1;
     return new Array(year, month, day);
 
@@ -848,7 +848,7 @@ function getTodayGregorian() {
     var t = new Date();
     var today = new Date();
     var y = today.getYear();
-    if (y &lt; 1000) {
+    if (y < 1000) {
 
         y += 1900;
     
@@ -942,14 +942,6 @@ function isjson(txt){
   return true;
 }
 
-
-function val(add){
-    return $(add).val();
-}
-function sval(add,val){
-    $(add).val(val);
-}
-
 function SetVisible(m) {
     document.getElementById(m).style.visibility='';
 }
@@ -1009,4 +1001,315 @@ function hazfe_fasele(id){
     var mytext = mytext.replace(/۸ /g, '۸');
     var mytext = mytext.replace(/۹ /g, '۹');
     $('#'+id).val(mytext);
+}
+//----------------------------------------------------------------------------------------------------------------------
+function compile_mustache(view_name, view) {
+    var template = document.getElementById(view_name).innerHTML;
+    var output = Mustache.render(template, view);
+    return output;
+}
+
+function compile_handlebar(view_name,data,target){
+    var template = Handlebars.compile(document.getElementById(view_name).innerHTML);
+    var ret = template(data);
+    if(target){
+        $(target).innerHTML = ret
+    }
+    return ret;
+}
+
+
+function guid() {
+    function s4() {
+        return Math.floor((1 + Math.random()) * 0x10000)
+            .toString(16)
+            .substring(1);
+    }
+    return s4() + s4() + '-' + s4() + '-' + s4() + '-' + s4() + '-' + s4() + s4() + s4();
+}
+
+function add_index(arr){
+    for(var i = 0; i < arr.length; ++i){
+        arr[i]["index"] = i+1;
+    }
+    return arr;
+}
+
+function add_index(arr){
+    for(var i = 0; i < arr.length; ++i){
+        arr[i]["index"] = i+1;
+    }
+    return arr;
+}
+///-------------------------------- random test values -----------------------------------------------------------------
+
+function rand_choice(arr){
+    return arr[random.rand(0,arr.length-1)];
+}
+
+function random_name(){
+    var names = ["علی","رضا","محمد","حسن","اردشیر","اردلان","قاسم","سیروس","مهران","مریم","زهرا","فاطمه","کریم"];
+    return names[random.rand(0,names.length-1)];
+}
+
+function random_family(){
+    var families = ["منصوری","ایمانی","خلیلی","هاشمی","ادیب","دهقانی","غفوری","مدیری","کیانیان","رهبر","سردار","فیروز"];
+    return families[random.rand(0,families.length-1)];
+}
+
+function random_mobile(){
+    var mobile = ["09359012233","09359012244","093590122","09179012233"];
+    return mobile[random.rand(0,mobile.length-1)];
+}
+
+function random_tel(){
+    var tel = ["8206778","8769089","23340565"];
+    return tel[random.rand(0,tel.length-1)];
+}
+
+function random_city_zone(){
+    var zones = ["عادل آباد","معالی آباد","تاچارا","اطلسی","ارتش","پایگاه"];
+    return rand_choice(zones);
+}
+
+function random_alley(){
+    a = ["کوچه 1","کوچه 2","کوچه 3","کوچه 4","کوچه 5","کوچه 6","کوچه اول","کوچه 5/1"];
+    return rand_choice(a);
+}
+
+function random_street(){
+    s = ["داریوش","زند","سراچ","ولیعسر","سپاسی","معدل","اردیبهشت","پیروزی","ملاصدرا","هدایت"];
+    return rand_choice(s);
+}
+
+function random_persian_date(){
+    //fixme year does not work with rand function
+    var year = "1397";
+    var month = random.rand(1,12);
+    var day = random.rand(1,30);
+    if(month>=1 && month <= 9){
+        month = "0" + month;
+    }
+    if(day >=1 && day <=9){
+        day = "0" + day;
+    }
+    return "" +year + "/" + month + "/" + day;
+}
+
+function add_index(arr){
+    for(var i = 0; i < arr.length; ++i){
+        arr[i]["index"] = i+1;
+    }
+    return arr;
+}
+
+function random_mcode(){
+    function ab_mc(vmc){var mc;return mc=vmc,10==mc.length?"1111111111"==mc||"0000000000"==mc||"2222222222"==mc||"3333333333"==mc||"4444444444"==mc||"5555555555"==mc||"6666666666"==mc||"7777777777"==mc||"8888888888"==mc||"9999999999"==mc?!1:(c=parseInt(mc.charAt(9)),n=10*parseInt(mc.charAt(0))+9*parseInt(mc.charAt(1))+8*parseInt(mc.charAt(2))+7*parseInt(mc.charAt(3))+6*parseInt(mc.charAt(4))+5*parseInt(mc.charAt(5))+4*parseInt(mc.charAt(6))+3*parseInt(mc.charAt(7))+2*parseInt(mc.charAt(8)),r=n-11*parseInt(n/11),0==r&&r==c||1==r&&1==c||r>1&&c==11-r?!0:!1):!1}
+    var count = 0;
+    var num = 0;
+    do{
+        num = random.rand(1111111111, 9999999999);
+        count++;
+        if(count>1000) break;
+    }while(! ab_mc(""+num) );
+    return num;
+}
+
+
+function sval(selector, val) {
+    $(selector).val(val);
+}
+
+function val(selector) {
+    return $(selector).val();
+}
+
+
+function http_build_query(params) {
+    return Object.keys(params).map(function (k) {
+        return encodeURIComponent(k) + '=' + encodeURIComponent(params[k]);
+    }).join("&");
+}
+
+function http_build_url(url, params) {
+    return url + "?" + http_build_query(params);
+}
+
+if (!String.prototype.format) {
+    String.prototype.format = function () {
+        var args = arguments;
+        return this.replace(/{(\d+)}/g, function (match, number) {
+            return typeof args[number] != 'undefined'
+                ? args[number]
+                : match
+                ;
+        });
+    };
+}
+
+function assert($condition,$msg){
+    console.assert($condition,$msg);
+}
+
+function isASCII(str) {
+    return /^[\x00-\x7F]*$/.test(str);
+}
+
+
+function ask_user_confirm(input)
+{
+    //example usage
+    // var assign_traffic = [];
+    // assign_traffic["url"] = "{{@BASE}}/emergency-traffic";
+    // assign_traffic["target_id"] = "assign_emergency_traffic";
+    // assign_traffic["reload_on_success"] = true;
+    // assign_traffic["title"] = "ØªØ®ØµÛŒØµ Ø¯Ø§Ø¯Ù‡ Ø´ÙˆØ¯ØŸ";
+    // var assign_to_send = {};
+    // assign_to_send["user_id"] = '{{ @user_id }}';
+    // assign_traffic["to_send"] = assign_to_send;
+    // ask_user_confirm(assign_traffic);
+    // example usage 2
+     // var dlg = {
+     //                        "url": /update-admin-attrs",
+     //                        "reload_on_success" : true,
+     //                        "title" : "Update attributes",
+     //                        "html": "Are you sure",
+     //                        "to_send":  to_send
+     //                    };
+    input                           = input                        || [];
+    input["title"]                  = input["title"]               || "title";
+    input["confirm_button_text"]    = input["confirm_button_text"] || "ØªØ§ÛŒÛŒØ¯";
+    input["cancel_button_text"]     = input["cancel_button_text"]  || "Ø§Ù†ØµØ±Ø§Ù�";
+    input["url"]                    = input["url"]                 || "";
+    input["to_send"]                = input["to_send"]             || [];
+    input["target_id"]              = input["target_id"]           || "";
+    input["reload_on_success"]      = input["reload_on_success"]   || false;
+
+    var target = '#' + input["target_id"];
+
+    // $(target).click(function(){
+        var to_send = {};
+        to_send = input["to_send"];
+        swal({
+            type: 'question',
+            title: input["title"],
+            html: "",
+            showLoaderOnConfirm: true,
+            showCancelButton:true,
+            confirmButtonText:input["confirm_button_text"],
+            cancelButtonText: input["cancel_button_text"],
+            cancelButtonColor:'#ff5d48',
+            preConfirm: function() {
+                return new Promise(function(resolve, reject) {
+                    $.ajax({
+                        url: input["url"],
+                        data: to_send,
+                        type: 'POST'
+                    }).done(function(data) {
+                        data = JSON.parse(data);
+                        if(data["success"])
+                            resolve(data['msg'] || "no message to show" );
+                        else
+                            reject(data['error']);
+                    });
+                });
+            }
+        }).then(function(data) {
+            data = data || "";
+            var msg = '<span style="font-family:IRANSans">';
+            msg+= data;
+            msg+="</span>";
+            swal({
+                type: 'success',
+                title: '',
+                html: msg
+            }).then(function(){
+               return false;
+               if( input["reload_on_success"] )
+               {
+                 location.reload();
+               }
+            });
+        });
+
+    // });
+
+}
+
+function show_warning_msg(msg)
+{
+    swal(msg, "", "warning");
+}
+
+function show_info_msg(msg,title)
+{
+    title = title || '';
+    msg = msg || '';
+    swal({"title":title,
+        type:"info",
+        text:msg});
+}
+
+function show_success_msg(msg)
+{
+    swal(msg,"", "success");
+}
+
+function show_message(msg)
+{
+    swal(msg);
+}
+
+
+function make_yes_no_swal(opt) {
+    opt          = opt || {};
+    opt['title'] = opt['title'] ? opt['title'] : '';
+    opt['text']  = opt['text'] ? opt['text'] : '';
+
+    return swal({
+        title: opt['title'],
+        text: opt['text'],
+        type: 'question',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'بلی',
+        cancelButtonText: 'خیر',
+        confirmButtonClass: 'btn btn-success',
+        cancelButtonClass: 'btn btn-danger',
+        buttonsStyling: false,
+        reverseButtons: true
+    })
+}
+
+function is_valid_mobile_number(mobile_number){
+  return /09[0-9]{9}/.test(mobile_number);
+}
+
+function is_valid_national_code(vmc){
+    var mc;return mc=vmc,10==mc.length?"1111111111"==mc||"0000000000"==mc||"2222222222"==mc||"3333333333"==mc||"4444444444"==mc||"5555555555"==mc||"6666666666"==mc||"7777777777"==mc||"8888888888"==mc||"9999999999"==mc?!1:(c=parseInt(mc.charAt(9)),n=10*parseInt(mc.charAt(0))+9*parseInt(mc.charAt(1))+8*parseInt(mc.charAt(2))+7*parseInt(mc.charAt(3))+6*parseInt(mc.charAt(4))+5*parseInt(mc.charAt(5))+4*parseInt(mc.charAt(6))+3*parseInt(mc.charAt(7))+2*parseInt(mc.charAt(8)),r=n-11*parseInt(n/11),0==r&&r==c||1==r&&1==c||r>1&&c==11-r?!0:!1):!1;
+}
+// Parsleyjs validations
+if(window.Parsley){
+
+    // validates mobile number
+     window.Parsley.addValidator('validMobile', {
+        validateString: function (value) {
+            return is_valid_mobile_number(value);
+        },
+        messages: {
+            en: "شماره موبایل نامعتبر"
+        }
+    });
+
+     // validates national code
+         window.Parsley.addValidator('validNationalCode',{
+        validateString:function(value){
+            return valid_national_code(value);
+        },
+        messages:{
+            en: "کد ملی نامعتبر"
+        }
+    });
+
 }

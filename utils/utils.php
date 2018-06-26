@@ -1223,7 +1223,7 @@ function isset_or_default(&$in,$k,$default)
 {
     if(!isset($in[$k])) $in[$k] = $default;
 }
-
+//----------------- experimental ---------------------
 function svg_circle_percent($in=array())
 {
     isset_or_default($in,"fill","green");
@@ -1236,4 +1236,16 @@ function svg_circle_percent($in=array())
     return '<svg height="'.$in['height'].'" width="'.$in['width'].'">' .
                 '<path stroke-width="5" fill="transparent" stroke="'.$in['stroke'].'" d="'.$d.'"></path>'.
             '</svg>';
+}
+
+function object_to_array($obj)
+{
+    if (is_object($obj)) $obj = (array)$obj;
+    if (is_array($obj)) {
+        $new = array();
+        foreach ($obj as $key => $val) {
+            $new[$key] = object_to_array($val);
+        }
+    } else $new = $obj;
+    return $new;
 }
