@@ -15,6 +15,10 @@ class Debug
         if (is_array($input) || is_object($input)) {
             $input = print_r($input, true);
         }
-        echo $input;
+        if (php_sapi_name() == 'cli') {
+            echo $input;
+        } else {
+            echo "<pre>" . $input . "</pre>";
+        }
     }
 }

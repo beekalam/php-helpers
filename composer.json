@@ -11,12 +11,6 @@
     ],
     "require": {},
     "autoload": {
-        "files": ["Debug.php"],
-        "psr-4": {
-            "Beekalam\\PHPHelpers\\": "src/"
-        }
-    },
-    "autoload-dev": {
         "psr-4": {
             "Beekalam\\PHPHelpers\\": "src/"
         }
