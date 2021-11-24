@@ -1,0 +1,13 @@
+{
+    "name": "beekalam/php-helpers",
+    "description": "Helper classes and functions",
+    "type": "library",
+    "license": "\"GPL-3.0-or-later\"",
+    "authors": [
+        {
+            "name": "Mohammad Reza mansouri",
+            "email": "beekalam@gmail.com"
+        }
+    ],
+    "require": {}
+}
