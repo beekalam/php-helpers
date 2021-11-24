@@ -2,12 +2,23 @@
     "name": "beekalam/php-helpers",
     "description": "Helper classes and functions",
     "type": "library",
-    "license": "\"GPL-3.0-or-later\"",
+    "license": "GPL-3.0-or-later",
     "authors": [
         {
             "name": "Mohammad Reza mansouri",
             "email": "beekalam@gmail.com"
         }
     ],
-    "require": {}
+    "require": {},
+    "autoload": {
+        "files": ["Debug.php"],
+        "psr-4": {
+            "Beekalam\\PHPHelpers\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Beekalam\\PHPHelpers\\": "src/"
+        }
+    }
 }
