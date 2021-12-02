@@ -19,4 +19,9 @@ class IO{
         }, $arr);
         return $arr;
     }
+
+    function readline()
+    {
+        return trim(fgets(STDIN));
+    }
 }
