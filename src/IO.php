@@ -24,4 +24,10 @@ class IO{
     {
         return trim(fgets(STDIN));
     }
+
+    function read_int()
+    {
+        $str = trim(fgets(STDIN));
+        return (int)$str;
+    }
 }
