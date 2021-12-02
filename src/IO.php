@@ -20,12 +20,12 @@ class IO{
         return $arr;
     }
 
-    function readline()
+    public static function readline()
     {
         return trim(fgets(STDIN));
     }
 
-    function read_int()
+    public static function read_int()
     {
         $str = trim(fgets(STDIN));
         return (int)$str;
